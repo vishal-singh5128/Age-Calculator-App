@@ -1,51 +1,4 @@
-
-function invalidYear(){
-  /*
-  $(".today-year").hide();
-  $(".today-month").hide();
-  $(".today-day").hide();
-  */
-if( birthYear > currentYear)
-{   
-  error=true
-  $(".today-year").html("Must be in a Past");
-  $(".today-year").show();
-  $(".today").addClass("warning")
-  $("input").css("border-color", "red");
-}
-else {error=false
-  $(".today-year").hide();}
-}
-
-function invalidMonth(){
- 
-  if (( birthMonth < 0 ) || (birthMonth > 12)){
-    error=true  
-    $(".today-month").html("Must be a valid Month");
-    $(".today-month").show();
-    $(".today").addClass("warning")
-    $("input").css("border-color", "red");
-  }
-  else {
-    $(".today-month").hide();
-    error=false}
-}
-
-function invalidDate(){
-  
-  if (( birthDate > 31) || (birthDate < 0)){
-      error=true
-    $(".today-day").html("Must be a valid Date");
-    $(".today-day").show();
-    $(".today").addClass("warning")
-    $("input").css("border-color", "red");
-  }
-    else {
-    error=false
-    $(".today-day").hide();}
-}
-
-
+$(".warning-note").css("display", "inline-block");
 
 let calendarDate = new Date()
 let currentYear = calendarDate.getFullYear()
@@ -70,6 +23,7 @@ console.log("birthDate.length "+birthDate.length)
 
 if ((birthDate.length==0) && (birthMonth.length==0) && (birthYear.length==0)) {
   error=true
+  $(".today-day").css("transform", "translate(0px, 0px)");
   $(".today-year").show()
   $(".today-month").show()
   $(".today-day").show()
@@ -83,6 +37,7 @@ if ((birthDate.length==0) && (birthMonth.length==0) && (birthYear.length==0)) {
 
 */
 else if ((birthDate.length==0)){
+  $(".today-day").css("transform", "translate(0px, 0px)");
   $(".today-year").hide()
   $(".today-month").hide()
   $(".today-day").hide()
@@ -97,26 +52,30 @@ else if ((birthDate.length==0)){
 
 else if ((birthMonth.length==0)){
   error=true
+  $(".today-day").css("transform", "translate(0px, 0px)");
   $(".today-year").hide()
   $(".today-month").hide()
   $(".today-day").hide()
-  $(".today-month").html("This field is required")
+  $(".today-day").html("This field is required")
   $(".today").addClass("warning")
   $("input").css("border-color", "red");
-  $(".today-month").show()
+  $(".today-day").show()
+  $(".today-day").css("transform", "translate(110% , 0px)");
   }
   
   
   
 else if ((birthYear.length==0)){
   error=true
+  $(".today-day").css("transform", "translate(0px, 0px)");
   $(".today-year").hide()
   $(".today-month").hide()
   $(".today-day").hide()
-  $(".today-year").html("This field is required")
+  $(".today-day").html("This field is required")
   $(".today").addClass("warning")
   $("input").css("border-color", "red");
-  $(".today-year").show()
+  $(".today-day").show()
+  $(".today-day").css("transform", "translate(200%, 0px)");
   }    
 
 else {error=false}
@@ -133,29 +92,31 @@ if (error==false){
 if( birthYear > currentYear)
 {   
   error=true
-  $(".today-year").html("Must be in a Past");
-  $(".today-year").show();
+  $(".today-day").css("transform", "translate(0px, 0px)");
+  $(".today-day").html("Must be in a Past");
+  $(".today-day").show();
   $(".today").addClass("warning")
   $("input").css("border-color", "red");
-}
-
+  $(".today-day").css("transform", "translate(200%, 0px)");
   
-   
+}
+ 
 //  invalidMonth()
 
 else if (( birthMonth < 0 ) || (birthMonth > 12)){
-  $(".today-year").hide();
   error=true  
-  $(".today-month").html("Must be a valid Month");
-  $(".today-month").show();
+  $(".today-day").css("transform", "translate(0px, 0px)");
+  $(".today-day").hide();
+  $(".today-day").html("Must be a valid Month");
+  $(".today-day").show();
   $(".today").addClass("warning")
   $("input").css("border-color", "red");
+  $(".today-day").css("transform", "translate(110%, 0px)");
 }
-
-
 
 //  invalidDate()
 else if (( birthDate > 31) || (birthDate < 0)){
+  $(".today-day").css("transform", "translate(0px, 0px)");
   $(".today-year").hide();
   $(".today-month").hide();
   error=true

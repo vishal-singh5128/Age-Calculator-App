@@ -44,7 +44,7 @@ input{
     font-size: 1.5em;
     padding: 8px ;
     margin:0 70px 0 25px;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
     border-radius: 12px;
     font-weight: bold;
     cursor: pointer;
@@ -52,7 +52,8 @@ input{
 
 .warning-note{
     display: none;
-    transform: translate(195px ,-91px );
+    transform: translate(0px ,0px );
+    margin-bottom: 50px;
     font-size: 15px;
     width: 170px;
     margin-left: 25px;
@@ -61,13 +62,13 @@ input{
 }
 
 .today-day{
-    transform: translate(2px ,-38px );
+    transform: translate(0px ,0px );
 }
 .today-month{
-    transform: translate(195px ,-51px );
+    transform: translate(0px ,0px );
 }
 .today-year{
-    transform: translate(384px ,-51px );
+    transform: translate(0px ,0px );
 
 }
 input::placeholder{
@@ -110,52 +111,6 @@ hr{
     color: #864CFF;
 }
 
-/*
-@media only screen and (max-width: 900){
-
-
-    .container {
-        background-color: #ffffff;
-        width: auto;
-        margin: 0;
-        border-radius: 20px;
-        border-bottom-right-radius: 200px;
-    }
-    .heading span{
-        width: auto;
-        margin-top: 0;
-    }
-    
-    input {
-        width: 80px;
-        margin: 0 40px 0 25px;
-        margin-bottom: 60px;
-        
-    }
-    
-    hr{
-        width: 100%;
-    }
-    
-    .icon-arrow{
-        left: 215px;
-    }
-    
-    .warning-note{
-        margin-left: 0;
-        width: 160px;
-    }
-    
-    .today-month{
-        transform: translate(182px ,-60px );
-    }
-    
-    .today-year{
-        transform: translate(350px ,-60px );
-    }
-    
-}
-*/
 
 @media screen and  (max-width: 882px){
 
@@ -172,7 +127,7 @@ hr{
 input {
     width: 80px;
     margin: 0 40px 0 25px;
-    margin-bottom: 60px;
+    margin-bottom: 25px;
     
 }
 
@@ -185,21 +140,16 @@ hr{
 }
 
 .warning-note{
-    margin-left: 0;
+    margin-left: 5px;
     width: 160px;
+    margin-bottom: 60px;
 }
 
-.today-month{
-    transform: translate(182px ,-60px );
-}
 
-.today-year{
-    transform: translate(350px ,-60px );
-}
 
 }
 
-@media screen and  (max-width: 646px){
+@media screen and  (max-width: 717px){
 
     .container{
         width: 85%;
@@ -214,7 +164,7 @@ hr{
     input {
         width: 80px;
         margin: 0 5px 0 20px;
-        margin-bottom: 60px;
+        margin-bottom: 30px;
         
     }
 
@@ -231,16 +181,11 @@ hr{
     }
     
     .warning-note{
-        margin-left: 0;
+        margin-left: 1.25px;
+        
         width: 160px;
     }
     
-    .today-month{
-        transform: translate(182px ,-60px );
-    }
     
-    .today-year{
-        transform: translate(350px ,-60px );
-    }
     
     }
